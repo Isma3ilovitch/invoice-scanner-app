@@ -1,16 +1,24 @@
-# my_app
+# 📱 Invoice Scanner App
 
-A new Flutter project.
+A Flutter app that lets you scan invoices using **Google ML Kit** for text recognition and store data locally with **Hive**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
+- OCR text extraction from invoices (offline with Google ML Kit).
+- Local storage using Hive.
+- Add, view, and edit saved invoices.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ⚙️ Prerequisites
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Before running the app, make sure you have:
+
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) installed and added to your PATH.
+- [Android Studio](https://developer.android.com/studio) or Android SDK installed.
+- An Android device with **Developer Options → USB Debugging** enabled.
+- `adb` installed on Linux Mint:
+  ```bash
+  sudo apt update
+  sudo apt install adb
