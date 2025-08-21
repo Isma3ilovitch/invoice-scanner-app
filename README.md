@@ -22,18 +22,19 @@ Before running the app, make sure you have:
   ```bash
   sudo apt update
   sudo apt install adb
-Here’s the content formatted in Markdown ready to paste into your README.md:
+📲 Running the App on Android (via USB)
 
-📲 **Running the App on Android (via USB)**
+Clone the repository
 
-1. **Clone the repository**
+git clone https://github.com/<your-username>/invoice-scanner-app.git
+cd invoice-scanner-app
 
-   ```bash
-   git clone https://github.com/<your-username>/invoice-scanner-app.git
-   cd invoice-scanner-app
+
 Get Flutter dependencies
 
 flutter pub get
+
+
 Connect your Android device via USB
 
 Enable Developer Mode and USB Debugging on your phone.
@@ -41,23 +42,42 @@ Enable Developer Mode and USB Debugging on your phone.
 Verify the device is detected:
 
 adb devices
+
+
 You should see your device listed.
 
 Run the app
 
 flutter run -d <device_id>
-or, if only one device is connected:
+
+
+or if only one device is connected:
 
 flutter run
+
 🛠 Troubleshooting
+
 No supported devices connected
 Run:
 
 flutter devices
+
+
 to confirm your phone is detected.
 
 Gradle build is very slow
-The first run downloads Android dependencies — be patient. Subsequent runs will be faster.
+The first run downloads Android dependencies — be patient. Next runs will be faster.
+
+Error: missing invoice_model.g.dart
+Regenerate Hive adapters with:
+
+flutter pub run build_runner build --delete-conflicting-outputs
+
+
+App not installing on phone
+Ensure your phone is unlocked and the "Allow USB Debugging" prompt is accepted.
+
+
 
 Error: missing invoice_model.g.dart
 Regenerate Hive adapters with:
