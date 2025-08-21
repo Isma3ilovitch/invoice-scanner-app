@@ -89,3 +89,13 @@ flutter pub run build_runner build --delete-conflicting-outputs
 ```
 -App not installing on phone
 -Ensure your phone is unlocked and the “Allow USB Debugging” prompt is accepted.
+
+---
+
+⚡ All you need to do:
+1. Save this as `README.md` in your project root.
+2. Commit and push it:
+   ```bash
+   git add README.md
+   git commit -m "Add README with Android USB instructions"
+   git push
