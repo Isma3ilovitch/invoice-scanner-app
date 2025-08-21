@@ -22,66 +22,70 @@ Before running the app, make sure you have:
   ```bash
   sudo apt update
   sudo apt install adb
-📲 Running the App on Android (via USB)
 
-Clone the repository
+## 📲 Running the App on Android (via USB)
 
+-Clone the repository
+```bash
 git clone https://github.com/<your-username>/invoice-scanner-app.git
 cd invoice-scanner-app
+```
 
 
-Get Flutter dependencies
-
+-Get Flutter dependencies
+```bash
 flutter pub get
+```
 
+-Connect your Android device via USB
 
-Connect your Android device via USB
+-Enable Developer Mode and USB Debugging on your phone.
 
-Enable Developer Mode and USB Debugging on your phone.
-
-Verify the device is detected:
-
+-Verify the device is detected:
+```bash
 adb devices
+```
 
+-You should see your device listed.
 
-You should see your device listed.
-
-Run the app
-
+-Run the app
+```bash
 flutter run -d <device_id>
+```
 
-
-or if only one device is connected:
-
+-or if only one device is connected:
+```bash
 flutter run
+```
 
-🛠 Troubleshooting
+## 🛠 Troubleshooting
 
-No supported devices connected
+-No supported devices connected
 Run:
-
+```bash
 flutter devices
+```
 
+-to confirm your phone is detected.
 
-to confirm your phone is detected.
+-Gradle build is very slow
+-The first run downloads Android dependencies — be patient. Next runs will be faster.
 
-Gradle build is very slow
-The first run downloads Android dependencies — be patient. Next runs will be faster.
-
-Error: missing invoice_model.g.dart
-Regenerate Hive adapters with:
-
+-Error: missing invoice_model.g.dart
+-Regenerate Hive adapters with:
+```bash
 flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+-App not installing on phone
+-Ensure your phone is unlocked and the "Allow USB Debugging" prompt is accepted.
 
 
-App not installing on phone
-Ensure your phone is unlocked and the "Allow USB Debugging" prompt is accepted.
 
-
-
-Error: missing invoice_model.g.dart
-Regenerate Hive adapters with:
-
+-Error: missing invoice_model.g.dart
+-Regenerate Hive adapters with:
+```bash
 flutter pub run build_runner build --delete-conflicting-outputs
-App not installing on phone
-Ensure your phone is unlocked and the “Allow USB Debugging” prompt is accepted.
+```
+-App not installing on phone
+-Ensure your phone is unlocked and the “Allow USB Debugging” prompt is accepted.
