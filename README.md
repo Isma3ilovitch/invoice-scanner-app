@@ -22,7 +22,7 @@ Before running the app, make sure you have:
   ```bash
   sudo apt update
   sudo apt install adb
-
+---
 ## 📲 Running the App on Android (via USB)
 
 -Clone the repository
@@ -57,6 +57,7 @@ flutter run -d <device_id>
 ```bash
 flutter run
 ```
+---
 
 ## 🛠 Troubleshooting
 
@@ -88,6 +89,7 @@ flutter pub run build_runner build --delete-conflicting-outputs
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
 -App not installing on phone
+
 -Ensure your phone is unlocked and the “Allow USB Debugging” prompt is accepted.
 
 ---
